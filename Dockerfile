@@ -11,4 +11,4 @@ FROM alpine:latest
 RUN apk add --no-cache ca-certificates
 COPY --from=0 /go/bin/* /bin/
 EXPOSE 8545 8546 30303 30303/udp 30304/udp
-ENTRYPOINT ["geth"]
+CMD /bin/geth
